@@ -2,7 +2,7 @@ package com.javaex.practice;
 
 import java.util.Scanner;
 
-public class Ex24 {
+public class Ex23 {
 
 	/*
 	 * 아래의 조건과 같이 출력되도록 프로그램을 작성하세요
@@ -35,14 +35,14 @@ public class Ex24 {
 				System.out.println("20살 이상");
 				System.out.println("건강검진해 아님");
 			}
-		} else {
-			if(age < 20) {
+		} else { // 홀수해. 건강검진해
+			if(age < 20) { //20살 미만
 				System.out.println("20살 미만 건강검진 대상이 아님");
 			} else if(age >= 20 && age < 40) {
 				System.out.println("20살 이상");
 				System.out.println("건강검진해");
 				System.out.println("암 검사X");
-			} else {
+			} else { //40살 이상
 				System.out.println("20살 이상");
 				System.out.println("건강검진해");
 				System.out.println("암 검사");

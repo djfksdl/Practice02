@@ -25,16 +25,16 @@ public class Ex17 {
 		double tax3 = 1000*0.09 + 3000*0.18 + 0.27*(money - 4000);
 		double tax4 = 1000*0.09 + 3000*0.18 + 4000*0.27 + 0.36*(money - 8000);
 		
-		if(money >=0 && money <= 1000) {
-			System.out.println("소득세는 " + tax1 + "입니다.");
-		}else if (money > 1000 && money <= 4000) {
-			System.out.println("소득세는 " + tax2 + "입니다.");
-		}else if (money > 4000 && money < 8000) {
-			System.out.println("소득세는 " + tax3 + "입니다.");
-		}else if (money >= 8000){
-			System.out.println("소득세는 " + tax4 + "입니다.");
-		}else {
+		if(money < 0) { // 음수 조건을 먼저 걸지 않으면 뒤에 money가 0보다 크다는걸 다 써줘야함. 
 			System.out.println("잘못 입력했습니다.");
+		}else if(money <= 1000) {
+			System.out.println("소득세는 " + tax1 + "입니다.");
+		}else if (money <= 4000) {
+			System.out.println("소득세는 " + tax2 + "입니다.");
+		}else if (money < 8000) {
+			System.out.println("소득세는 " + tax3 + "입니다.");
+		}else{
+			System.out.println("소득세는 " + tax4 + "입니다.");
 		}
 		
 		sc.close();

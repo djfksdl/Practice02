@@ -3,8 +3,7 @@ package com.javaex.practice;
 import java.util.Scanner;
 
 public class Ex15 {
-	/* ??
-	 * 아래와 같은 계산기 프로그램을 작성하세요.
+	/* 아래와 같은 계산기 프로그램을 작성하세요.
 	⚫ 기호, 숫자1, 숫자2 순서로 입력받습니다.
 	⚫ 기호는 ( + - * / ) 4가지 입니다.
 	⚫ 입력된 내용으로 계산하여 결과값을 출력합니다.
@@ -19,12 +18,32 @@ public class Ex15 {
 		String simbol = sc.nextLine();
 		
 		System.out.print("숫자1: ");
-		int num1 = sc.nextInt();
+		double num1 = sc.nextInt();
 		
 		System.out.print("숫자2:");
-		int num2 = sc.nextInt();
+		double num2 = sc.nextInt();
 		
-//		if()
+		switch(simbol) {
+		
+		case "+":
+			System.out.println("결과는: " + (num1 + num2));
+			break;
+		case "-":
+			System.out.println("결과는 " + (num1 - num2));
+			break;
+		case "*":
+			System.out.println("결과는 " + (num1 * num2));
+			break;
+		case "/":
+			if(num2 == 0) {
+				System.out.println("계산할 수 없습니다.");
+			}else {
+				System.out.println("결과는 " + (num1/num2));
+			}
+			break;
+		default:
+			System.out.println("계산할 수 없는 기호입니다.");
+		}
 		
 		sc.close();
 	}

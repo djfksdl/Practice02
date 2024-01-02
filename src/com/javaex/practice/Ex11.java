@@ -7,6 +7,8 @@ public class Ex11 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int share;
+		int rest;
 		
 		System.out.print("첫번째 숫자:");
 		int num1 = sc.nextInt();
@@ -15,12 +17,18 @@ public class Ex11 {
 		int num2 = sc.nextInt();
 		
 		if(num1 > num2) {
-			System.out.println("몫: " + num1/num2);
-			System.out.println("나머지: " + num1%num2);
+			share = num1/num2;
+			rest = num1%num2;
+//			System.out.println("몫: " + num1/num2);
+//			System.out.println("나머지: " + num1%num2);
 		} else {
-			System.out.println("몫: " + num2/num1);
-			System.out.println("나머지: " + num2%num1);
+			share = num2/num1;
+			rest = num2%num1;
+//			System.out.println("몫: " + num2/num1);
+//			System.out.println("나머지: " + num2%num1);
 		}
+		System.out.println("몫:" + share);
+		System.out.println("나머지: " + rest);
 		sc.close();
 	}
 }
