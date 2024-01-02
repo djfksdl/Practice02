@@ -7,6 +7,6 @@ public class Ex01 {
 	(3) switch( 'A' ){….}
 	(4) switch( 100 ){…} // 값이 아닌 변하는 변수를 넣어야한다.
 	(5) switch( "A" ){…}
-?	(6) if( name == "홍길동" ) // String이라 equals를 써야하는가?
+?	(6) if( name == "홍길동" ) // String이라 .equals를 써야한다
 	*/
 }
